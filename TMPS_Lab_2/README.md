@@ -32,7 +32,8 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 
 2.  Pattern-ul Builder este utilizat pentru a construi obiecte complexe cu ajutorul altor obiecte mai simple si independente de obiectul de tipul final pe care se doreste a fi creat. Scopul este de a separa procesul de creare a obiectului de reprezentarea acestuia, astfel incat acelasi proces de constructie sa poata fi folosit pentru a crea diferite reprezentari ale obiectului.
 
-	class BuilderMethod {
+
+    class BuilderMethod {
     constructor() {
         this.user = {
             name:null,
@@ -51,8 +52,7 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 
     build() {
         return this.user;
-    }
-}
+    }}
 
 
 În codul de mai sus este implimentat patternul Builder. Clasa din exemplu conține metode pentru a seta numele și adresa de email ale utilizatorului, folosind un obiect user gol ca șablon și actualizându-l cu informațiile specificate în fiecare metodă. După ce toate atributele necesare sunt setate, metoda build() returnează obiectul User completat.
@@ -99,8 +99,8 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
             default:
                 throw new Error('Invalid user type specified');
         }
-    }
-}
+    }}
+    
 
 În codul de mai sus sunt implimentate 2 tipuri de design pattern: Builder şi Factory Method.
 Builder pattern este folosit în UserBuilder, o clasă care construiește obiecte de tip User sau AdminUser prin intermediul metodelor setId(), setName() și setEmail(), și apoi se finalizează prin apelarea metodei build().
@@ -128,7 +128,8 @@ Astfel, Builder pattern este utilizat pentru a construi obiecte de tip User și 
 	    .catch(error => {
 		console.error('Error creating admin user:', error);
 	    });
+	    
     
-	Acest cod crează, prin intermediul Factory Method, obiecte de tip User şi AdminUser definind două obiecte de date, userData și adminData, care conțin informații despre utilizatorii pe care vrem să îi creăm.
-	Apelând funcția createUser() a clasei UserFactory, putem să creăm obiecte de tip User și AdminUser în funcție de tipul specificat. În cazul de mai sus, se vor crea mai întâi un utilizator și apoi un utilizator cu rol de administrator. 
+Acest cod crează, prin intermediul Factory Method, obiecte de tip User şi AdminUser definind două obiecte de date, userData și adminData, care conțin informații despre utilizatorii pe care vrem să îi creăm.
+Apelând funcția createUser() a clasei UserFactory, putem să creăm obiecte de tip User și AdminUser în funcție de tipul specificat. În cazul de mai sus, se vor crea mai întâi un utilizator și apoi un utilizator cu rol de administrator. 
 
