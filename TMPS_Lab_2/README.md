@@ -6,7 +6,6 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 
 class DbSingleton {
     static instance = null;
-
     static getInstance() {
         if (!DbSingleton.instance) {
             DbSingleton.instance = mysql.createConnection({
@@ -26,7 +25,6 @@ class DbSingleton {
         return DbSingleton.instance;
     }
 }
-
 module.exports = DbSingleton;
 
 **********************
@@ -70,7 +68,6 @@ class UserFactory {
     static async createUser(type, data) {
         const dbConn = db.getInstance();
         const userBuilder = new UserBuilder();
-
         switch(type) {
             case 'user':
                 const user = userBuilder
