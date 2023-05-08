@@ -62,7 +62,8 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 3.Factory Method este utilizat pentru a crea obiecte de un anumit tip în mod dinamic, în funcție de nevoile aplicației. În loc să creeze obiecte direct, aplicația utilizează o metodă de fabrică (Factory Method) care se ocupă de crearea obiectelor, astfel încât aplicația să fie mai flexibilă și mai ușor de întreținut.
 
 
-   class UserFactory {
+    class UserFactory {
+ 
     static async createUser(type, data) {
         const dbConn = db.getInstance();
         const userBuilder = new UserBuilder();
@@ -99,8 +100,7 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
                 });
             default:
                 throw new Error('Invalid user type specified');
-        }
-    }}
+        }}}
     
 
 În codul de mai sus sunt implimentate 2 tipuri de design pattern: Builder şi Factory Method.
