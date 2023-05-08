@@ -30,7 +30,7 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 
 **********************
 
-2.  Pattern-ul Builder este utilizat pentru a construi obiecte complexe cu ajutorul altor obiecte mai simple si independente de obiectul de tipul final pe care se doreste a fi creat. Scopul este de a separa procesul de creare a obiectului de reprezentarea acestuia, astfel incat acelasi proces de constructie sa poata fi folosit pentru a crea diferite reprezentari ale obiectului.
+2.Pattern-ul Builder este utilizat pentru a construi obiecte complexe cu ajutorul altor obiecte mai simple si independente de obiectul de tipul final pe care se doreste a fi creat. Scopul este de a separa procesul de creare a obiectului de reprezentarea acestuia, astfel incat acelasi proces de constructie sa poata fi folosit pentru a crea diferite reprezentari ale obiectului.
 
 
     class BuilderMethod {
@@ -55,13 +55,14 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
     }}
 
 
+
 În codul de mai sus este implimentat patternul Builder. Clasa din exemplu conține metode pentru a seta numele și adresa de email ale utilizatorului, folosind un obiect user gol ca șablon și actualizându-l cu informațiile specificate în fiecare metodă. După ce toate atributele necesare sunt setate, metoda build() returnează obiectul User completat.
 
 
-3.  Factory Method este utilizat pentru a crea obiecte de un anumit tip în mod dinamic, în funcție de nevoile aplicației. În loc să creeze obiecte direct, aplicația utilizează o metodă de fabrică (Factory Method) care se ocupă de crearea obiectelor, astfel încât aplicația să fie mai flexibilă și mai ușor de întreținut.
+3.Factory Method este utilizat pentru a crea obiecte de un anumit tip în mod dinamic, în funcție de nevoile aplicației. În loc să creeze obiecte direct, aplicația utilizează o metodă de fabrică (Factory Method) care se ocupă de crearea obiectelor, astfel încât aplicația să fie mai flexibilă și mai ușor de întreținut.
 
 
-    class UserFactory {
+   class UserFactory {
     static async createUser(type, data) {
         const dbConn = db.getInstance();
         const userBuilder = new UserBuilder();
