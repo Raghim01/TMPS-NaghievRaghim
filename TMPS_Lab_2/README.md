@@ -69,6 +69,7 @@ class BuilderMethod {
 **********************
 
 class UserFactory {
+
     static async createUser(type, data) {
         const dbConn = db.getInstance();
         const userBuilder = new UserBuilder();
@@ -122,6 +123,7 @@ Astfel, Builder pattern este utilizat pentru a construi obiecte de tip User și 
  **********************
 
 const userData = { name: 'John', email: 'johndo@example.com' };
+
 UserFactory.createUser('user', userData)
     .then(user => {
         console.log('Created user:', user);
