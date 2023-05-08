@@ -4,6 +4,7 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
 
 **********************
 
+
 class DbSingleton {
     static instance = null;
     static getInstance() {
@@ -26,6 +27,8 @@ class DbSingleton {
     }
 }
 module.exports = DbSingleton;
+
+
 
 **********************
 
