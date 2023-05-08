@@ -25,7 +25,7 @@ Un exemplu de utilizare a patternului singleton ar fi un obiect de conexiune la 
         return DbSingleton.instance;
     }
 }
-module.exports = DbSingleton;
+	module.exports = DbSingleton;
 
 
 
